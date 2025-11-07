@@ -61,20 +61,37 @@ This is a comprehensive travel planning system for a 8-day/7-night trip to Haina
 ## How to Run / 如何运行
 
 ### Prerequisites / 先决条件
-- .NET SDK 6.0 or higher
-- .NET SDK 6.0 或更高版本
+- .NET SDK 6.0 or higher (tested with .NET 9.0)
+- .NET SDK 6.0 或更高版本（已在 .NET 9.0 测试）
 
 ### Running the Program / 运行程序
 
+#### Option 1: Create a dotnet project (recommended)
+```bash
+# Create a new console project
+dotnet new console -n HainanTravelPlanner
+
+# Copy the code file
+cp Code/HainanTravelPlanner.cs HainanTravelPlanner/Program.cs
+
+# Navigate to the project directory
+cd HainanTravelPlanner
+
+# Run the program
+dotnet run
+```
+
+#### Option 2: Compile directly (requires C# compiler)
 ```bash
 # Navigate to the Code directory
 cd Code
 
-# Compile the program (if using .NET Framework)
+# Compile the program
 csc HainanTravelPlanner.cs
 
-# Or use dotnet (recommended)
-dotnet run HainanTravelPlanner.cs
+# Run the executable
+./HainanTravelPlanner.exe  # On Windows
+mono HainanTravelPlanner.exe  # On Linux/Mac with Mono
 
 # The program will display:
 # - Flight recommendations
